@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginStart="10dp"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/ic_music"
+            android:layout_gravity="start|center_vertical"
+            android:id="@+id/icMusic"
+            app:tint="?attr/colorPrimaryVariant" />
+
+        <TextView
+            android:fontFamily="@font/product_sans_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="?attr/colorOnSurface"
+            android:text="Shuffle playback"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="14dp"/>
+
+        <ImageView
+            android:layout_marginStart="92dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/ic_shuffle"
+            app:tint="?attr/colorPrimaryVariant" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_music"
+        android:background="?attr/colorSurface"/>
+
+</LinearLayout>
